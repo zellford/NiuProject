@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{68d6418a-97f0-4a32-9120-56152621132b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc\manual.md">
+      <Filter>doc</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\tensor\test\TOnehot.h" />
+    <ClInclude Include="source\network\XBackwardFunc.h" />
+    <ClInclude Include="source\network\XBackwardLoss.h" />
+    <ClInclude Include="source\network\XBackwardMath.h" />
+    <ClInclude Include="source\network\XBackwardShape.h" />
+    <ClInclude Include="source\network\XNet.h" />
+    <ClInclude Include="source\network\XNoder.h" />
+    <ClInclude Include="source\sample\fnnlm\FNNLM.h" />
+    <ClInclude Include="source\sample\transformer\T2TAttention.h" />
+    <ClInclude Include="source\sample\transformer\T2TBatchLoader.h" />
+    <ClInclude Include="source\sample\transformer\T2TDecoder.h" />
+    <ClInclude Include="source\sample\transformer\T2TEmbedding.h" />
+    <ClInclude Include="source\sample\transformer\T2TEncoder.h" />
+    <ClInclude Include="source\sample\transformer\T2TFNN.h" />
+    <ClInclude Include="source\sample\transformer\T2TLayerNormal.h" />
+    <ClInclude Include="source\sample\transformer\T2TLengthPenalty.h" />
+    <ClInclude Include="source\sample\transformer\T2TModel.h" />
+    <ClInclude Include="source\sample\transformer\T2TOutput.h" />
+    <ClInclude Include="source\sample\transformer\T2TPredictor.h" />
+    <ClInclude Include="source\sample\transformer\T2TSearch.h" />
+    <ClInclude Include="source\sample\transformer\T2TTester.h" />
+    <ClInclude Include="source\sample\transformer\T2TTrainer.h" />
+    <ClInclude Include="source\sample\transformer\T2TUtility.h" />
+    <ClInclude Include="source\sample\transformer\Transformer.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\Div.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\DivDim.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\Mask.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\MatrixMul.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\MatrixMul2D.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\MatrixMul2DMultiTheading.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\MatrixMul2DParallel.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\MatrixMulBatched.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\MulAndShift.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\Multiply.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\MultiplyDim.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\Sub.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\SubDim.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\Sum.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\SumDim.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\XTensorBLAS.h" />
+    <ClInclude Include="source\tensor\core\getandset\ConvertDataType.h" />
+    <ClInclude Include="source\tensor\core\getandset\OnehotAndIndex.h" />
+    <ClInclude Include="source\tensor\core\getandset\Select.h" />
+    <ClInclude Include="source\tensor\core\getandset\SetData.h" />
+    <ClInclude Include="source\tensor\core\math\Binary.h" />
+    <ClInclude Include="source\tensor\core\math\Clip.h" />
+    <ClInclude Include="source\tensor\core\math\Compare.h" />
+    <ClInclude Include="source\tensor\core\math\Normalize.h" />
+    <ClInclude Include="source\tensor\core\math\ScaleAndShift.h" />
+    <ClInclude Include="source\tensor\core\math\Unary.h" />
+    <ClInclude Include="source\tensor\core\movement\CopyBlocks.h" />
+    <ClInclude Include="source\tensor\core\movement\CopyBlocksInGrid.h" />
+    <ClInclude Include="source\tensor\core\movement\CopyBlocksOnSite.h" />
+    <ClInclude Include="source\tensor\core\movement\CopyData2D.h" />
+    <ClInclude Include="source\tensor\core\movement\CopyIndexed.h" />
+    <ClInclude Include="source\tensor\core\movement\CopyInGrid.h" />
+    <ClInclude Include="source\tensor\core\movement\CopyValues.h" />
+    <ClInclude Include="source\tensor\core\movement\Gather.h" />
+    <ClInclude Include="source\tensor\core\movement\Spread.h" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceMax.h" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceMean.h" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceStandardVariance.h" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceSum.h" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceSumAll.h" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceSumSquared.h" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceVariance.h" />
+    <ClInclude Include="source\tensor\core\reduce\VectorBuffer.h" />
+    <ClInclude Include="source\tensor\core\shape\Concatenate.h" />
+    <ClInclude Include="source\tensor\core\shape\ConcatenateSolely.h" />
+    <ClInclude Include="source\tensor\core\shape\IsSameShaped.h" />
+    <ClInclude Include="source\tensor\core\shape\MakeMergeBlockIndex.h" />
+    <ClInclude Include="source\tensor\core\shape\MakeSplitBlockIndex.h" />
+    <ClInclude Include="source\tensor\core\shape\Merge.h" />
+    <ClInclude Include="source\tensor\core\shape\MergeBlockLists.h" />
+    <ClInclude Include="source\tensor\core\shape\Permute.h" />
+    <ClInclude Include="source\tensor\core\shape\Reshape.h" />
+    <ClInclude Include="source\tensor\core\shape\Split.h" />
+    <ClInclude Include="source\tensor\core\shape\Squeeze.h" />
+    <ClInclude Include="source\tensor\core\shape\Stack.h" />
+    <ClInclude Include="source\tensor\core\shape\Transpose.h" />
+    <ClInclude Include="source\tensor\core\shape\Unsqueeze.h" />
+    <ClInclude Include="source\tensor\core\sort\Sort.h" />
+    <ClInclude Include="source\tensor\core\sort\TopK.h" />
+    <ClInclude Include="source\tensor\core\utilities\CheckData.h" />
+    <ClInclude Include="source\tensor\core\utilities\FlushToMem.h" />
+    <ClInclude Include="source\tensor\core\utilities\SetAscendingOrder.h" />
+    <ClInclude Include="source\tensor\core\utilities\XMatrixSegment.h" />
+    <ClInclude Include="source\tensor\core\CHeader.h" />
+    <ClInclude Include="source\tensor\function\Dropout.h" />
+    <ClInclude Include="source\tensor\function\DropoutWithIndex.h" />
+    <ClInclude Include="source\tensor\function\FHeader.h" />
+    <ClInclude Include="source\tensor\function\HardTanH.h" />
+    <ClInclude Include="source\tensor\function\Identity.h" />
+    <ClInclude Include="source\tensor\function\LogSoftmax.h" />
+    <ClInclude Include="source\tensor\function\Loss.h" />
+    <ClInclude Include="source\tensor\function\Rectify.h" />
+    <ClInclude Include="source\tensor\function\Sigmoid.h" />
+    <ClInclude Include="source\tensor\function\Softmax.h" />
+    <ClInclude Include="source\tensor\loss\CrossEntropy.h" />
+    <ClInclude Include="source\tensor\loss\LHeader.h" />
+    <ClInclude Include="source\tensor\test\TAbsolute.h" />
+    <ClInclude Include="source\tensor\test\TClip.h" />
+    <ClInclude Include="source\tensor\test\TCompare.h" />
+    <ClInclude Include="source\tensor\test\TConcatenate.h" />
+    <ClInclude Include="source\tensor\test\TConcatenateSolely.h" />
+    <ClInclude Include="source\tensor\test\TConvertDataType.h" />
+    <ClInclude Include="source\tensor\test\TCopyIndexed.h" />
+    <ClInclude Include="source\tensor\test\TCopyValues.h" />
+    <ClInclude Include="source\tensor\test\TCos.h" />
+    <ClInclude Include="source\tensor\test\TCrossEntropy.h" />
+    <ClInclude Include="source\tensor\test\TDiv.h" />
+    <ClInclude Include="source\tensor\test\TDivDim.h" />
+    <ClInclude Include="source\tensor\test\TDropout.h" />
+    <ClInclude Include="source\tensor\test\Test.h" />
+    <ClInclude Include="source\tensor\test\TExp.h" />
+    <ClInclude Include="source\tensor\test\TGather.h" />
+    <ClInclude Include="source\tensor\test\THardTanH.h" />
+    <ClInclude Include="source\tensor\test\TIdentity.h" />
+    <ClInclude Include="source\tensor\test\TLog.h" />
+    <ClInclude Include="source\tensor\test\TLogSoftmax.h" />
+    <ClInclude Include="source\tensor\test\TLoss.h" />
+    <ClInclude Include="source\tensor\test\TMatrixMul.h" />
+    <ClInclude Include="source\tensor\test\TMatrixMul2D.h" />
+    <ClInclude Include="source\tensor\test\TMatrixMul2DParallel.h" />
+    <ClInclude Include="source\tensor\test\TMatrixMulBatched.h" />
+    <ClInclude Include="source\tensor\test\TMerge.h" />
+    <ClInclude Include="source\tensor\test\TMultiply.h" />
+    <ClInclude Include="source\tensor\test\TMultiplyDim.h" />
+    <ClInclude Include="source\tensor\test\TNegate.h" />
+    <ClInclude Include="source\tensor\test\TNormalize.h" />
+    <ClInclude Include="source\tensor\test\TPower.h" />
+    <ClInclude Include="source\tensor\test\TRectify.h" />
+    <ClInclude Include="source\tensor\test\TReduceMax.h" />
+    <ClInclude Include="source\tensor\test\TReduceMean.h" />
+    <ClInclude Include="source\tensor\test\TReduceSum.h" />
+    <ClInclude Include="source\tensor\test\TReduceSumAll.h" />
+    <ClInclude Include="source\tensor\test\TReduceSumSquared.h" />
+    <ClInclude Include="source\tensor\test\TReduceVariance.h" />
+    <ClInclude Include="source\tensor\test\TRound.h" />
+    <ClInclude Include="source\tensor\test\TScaleAndShift.h" />
+    <ClInclude Include="source\tensor\test\TSelect.h" />
+    <ClInclude Include="source\tensor\test\TSetAscendingOrder.h" />
+    <ClInclude Include="source\tensor\test\TSetData.h" />
+    <ClInclude Include="source\tensor\test\TSigmoid.h" />
+    <ClInclude Include="source\tensor\test\TSign.h" />
+    <ClInclude Include="source\tensor\test\TSin.h" />
+    <ClInclude Include="source\tensor\test\TSoftmax.h" />
+    <ClInclude Include="source\tensor\test\TSort.h" />
+    <ClInclude Include="source\tensor\test\TSplit.h" />
+    <ClInclude Include="source\tensor\test\TSpread.h" />
+    <ClInclude Include="source\tensor\test\TSub.h" />
+    <ClInclude Include="source\tensor\test\TSubDim.h" />
+    <ClInclude Include="source\tensor\test\TSum.h" />
+    <ClInclude Include="source\tensor\test\TSumDim.h" />
+    <ClInclude Include="source\tensor\test\TTan.h" />
+    <ClInclude Include="source\tensor\test\TTopK.h" />
+    <ClInclude Include="source\tensor\test\TTranspose.h" />
+    <ClInclude Include="source\tensor\test\TUnsqueeze.h" />
+    <ClInclude Include="source\tensor\test\TXMem.h" />
+    <ClInclude Include="source\tensor\XBLAS.h" />
+    <ClInclude Include="source\tensor\XCall.h" />
+    <ClInclude Include="source\tensor\XDataType.h" />
+    <ClInclude Include="source\tensor\XDevice.h" />
+    <ClInclude Include="source\tensor\XGlobal.h" />
+    <ClInclude Include="source\tensor\XHeap.h" />
+    <ClInclude Include="source\tensor\XLink.h" />
+    <ClInclude Include="source\tensor\XList.h" />
+    <ClInclude Include="source\tensor\XMem.h" />
+    <ClInclude Include="source\tensor\XName.h" />
+    <ClInclude Include="source\tensor\XPRunner.h" />
+    <ClInclude Include="source\tensor\XQueue.h" />
+    <ClInclude Include="source\tensor\XStream.h" />
+    <ClInclude Include="source\tensor\XTensor.h" />
+    <ClInclude Include="source\tensor\XThread.h" />
+    <ClInclude Include="source\tensor\XUtility.h" />
+    <ClInclude Include="source\tensor\core\arithmetic\Div.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\DivDim.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\Mask.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\MatrixMul2D.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\Multiply.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\MultiplyDim.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\Sub.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\SubDim.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\Sum.cuh" />
+    <ClInclude Include="source\tensor\core\arithmetic\SumDim.cuh" />
+    <ClInclude Include="source\tensor\core\getandset\ConvertDataType.cuh" />
+    <ClInclude Include="source\tensor\core\getandset\OnehotAndIndex.cuh" />
+    <ClInclude Include="source\tensor\core\getandset\Select.cuh" />
+    <ClInclude Include="source\tensor\core\getandset\SetData.cuh" />
+    <ClInclude Include="source\tensor\core\math\Binary.cuh" />
+    <ClInclude Include="source\tensor\core\math\Clip.cuh" />
+    <ClInclude Include="source\tensor\core\math\Compare.cuh" />
+    <ClInclude Include="source\tensor\core\math\Normalize.cuh" />
+    <ClInclude Include="source\tensor\core\math\ScaleAndShift.cuh" />
+    <ClInclude Include="source\tensor\core\math\Unary.cuh" />
+    <ClInclude Include="source\tensor\core\movement\CopyBlocksInGrid.cuh" />
+    <ClInclude Include="source\tensor\core\movement\CopyBlocksOnSite.cuh" />
+    <ClInclude Include="source\tensor\core\movement\CopyBlocksSelected.cuh" />
+    <ClInclude Include="source\tensor\core\movement\CopyIndexed.cuh" />
+    <ClInclude Include="source\tensor\core\movement\CopyValues.cuh" />
+    <ClInclude Include="source\tensor\core\movement\Gather.cuh" />
+    <ClInclude Include="source\tensor\core\movement\Spread.cuh" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceMax.cuh" />
+    <ClInclude Include="source\tensor\core\reduce\ReduceSum.cuh" />
+    <ClInclude Include="source\tensor\core\shape\MakeMergeBlockIndex.cuh" />
+    <ClInclude Include="source\tensor\core\shape\MakeSplitBlockIndex.cuh" />
+    <ClInclude Include="source\tensor\core\shape\MergeBlockLists.cuh" />
+    <ClInclude Include="source\tensor\core\shape\Unsqueeze.cuh" />
+    <ClInclude Include="source\tensor\core\sort\Sort.cuh" />
+    <ClInclude Include="source\tensor\core\sort\TopK.cuh" />
+    <ClInclude Include="source\tensor\core\utilities\FlushToMem.cuh" />
+    <ClInclude Include="source\tensor\core\utilities\SetAscendingOrder.cuh" />
+    <ClInclude Include="source\tensor\function\Dropout.cuh" />
+    <ClInclude Include="source\tensor\function\DropoutWithIndex.cuh" />
+    <ClInclude Include="source\tensor\function\HardTanH.cuh" />
+    <ClInclude Include="source\tensor\function\LogSoftmax.cuh" />
+    <ClInclude Include="source\tensor\function\Loss.cuh" />
+    <ClInclude Include="source\tensor\function\Rectify.cuh" />
+    <ClInclude Include="source\tensor\function\Sigmoid.cuh" />
+    <ClInclude Include="source\tensor\function\Softmax.cuh" />
+    <ClInclude Include="source\tensor\loss\CrossEntropy.cuh" />
+    <ClInclude Include="source\sample\regression\FNNReg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\network\Main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\network\XBackwardFunc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\network\XBackwardLoss.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\network\XBackwardMath.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\network\XBackwardShape.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\network\XNet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\network\XNoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\fnnlm\FNNLM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TAttention.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TBatchLoader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TDecoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TEmbedding.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TFNN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TLayerNormal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TLengthPenalty.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TModel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TOutput.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TPredictor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TSearch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TTester.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TTrainer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\T2TUtility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\transformer\Transformer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\Div.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\DivDim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\Mask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\MatrixMul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\MatrixMul2D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\MatrixMul2DMultiTheading.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\MatrixMul2DParallel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\MatrixMulBatched.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\MulAndShift.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\Multiply.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\MultiplyDim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\Sub.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\SubDim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\Sum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\SumDim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\arithmetic\XTensorBLAS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\getandset\ConvertDataType.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\getandset\OnehotAndIndex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\getandset\Select.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\getandset\SetData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\math\Binary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\math\Clip.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\math\Compare.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\math\Normalize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\math\ScaleAndShift.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\math\Unary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\CopyBlocks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\CopyBlocksInGrid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\CopyBlocksOnSite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\CopyData2D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\CopyIndexed.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\CopyInGrid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\CopyValues.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\Gather.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\movement\Spread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\reduce\ReduceMax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\reduce\ReduceMean.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\reduce\ReduceSum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\reduce\ReduceSumAll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\reduce\ReduceSumSquared.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\reduce\ReduceVariance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\reduce\VectorBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Concatenate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\ConcatenateSolely.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\IsSameShaped.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\MakeMergeBlockIndex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\MakeSplitBlockIndex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Merge.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\MergeBlockLists.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Permute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Reshape.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Split.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Squeeze.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Stack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Transpose.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\shape\Unsqueeze.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\sort\Sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\sort\TopK.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\utilities\CheckData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\utilities\FlushToMem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\utilities\SetAscendingOrder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\core\utilities\XMatrixSegment.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\Dropout.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\DropoutWithIndex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\HardTanH.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\Identity.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\LogSoftmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\Loss.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\Rectify.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\Sigmoid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\function\Softmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\loss\CrossEntropy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TAbsolute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TClip.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TCompare.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TConcatenate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TConcatenateSolely.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TConvertDataType.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TCopyIndexed.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TCopyValues.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TCos.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TCrossEntropy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TDiv.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TDivDim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TDropout.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\Test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TExp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TGather.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\THardTanH.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TIdentity.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TLogSoftmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TLoss.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TMatrixMul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TMatrixMul2D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TMatrixMul2DParallel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TMatrixMulBatched.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TMerge.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TMultiply.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TMultiplyDim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TNegate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TNormalize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TPower.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TRectify.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TReduceMax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TReduceMean.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TReduceSum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TReduceSumAll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TReduceSumSquared.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TReduceVariance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TRound.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TScaleAndShift.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSelect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSetAscendingOrder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSetData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSigmoid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSign.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSoftmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSplit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSpread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSub.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSubDim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TSumDim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TTan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TTopK.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TTranspose.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TUnsqueeze.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\test\TXMem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\Main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XBLAS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XCall.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XDataType.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XDevice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XGlobal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XHeap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XLink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XMem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XName.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XPRunner.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XStream.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XTensor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\tensor\XUtility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sample\regression\FNNReg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="source\tensor\core\arithmetic\Div.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\DivDim.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\Mask.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\MatrixMul2D.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\Multiply.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\MultiplyDim.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\Sub.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\SubDim.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\Sum.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\SumDim.cu" />
+    <CudaCompile Include="source\tensor\core\arithmetic\XTensorBLAS.cu" />
+    <CudaCompile Include="source\tensor\core\getandset\ConvertDataType.cu" />
+    <CudaCompile Include="source\tensor\core\getandset\OnehotAndIndex.cu" />
+    <CudaCompile Include="source\tensor\core\getandset\Select.cu" />
+    <CudaCompile Include="source\tensor\core\getandset\SetData.cu" />
+    <CudaCompile Include="source\tensor\core\math\Binary.cu" />
+    <CudaCompile Include="source\tensor\core\math\Clip.cu" />
+    <CudaCompile Include="source\tensor\core\math\Compare.cu" />
+    <CudaCompile Include="source\tensor\core\math\Normalize.cu" />
+    <CudaCompile Include="source\tensor\core\math\ScaleAndShift.cu" />
+    <CudaCompile Include="source\tensor\core\math\Unary.cu" />
+    <CudaCompile Include="source\tensor\core\movement\CopyBlocksInGrid.cu" />
+    <CudaCompile Include="source\tensor\core\movement\CopyBlocksOnSite.cu" />
+    <CudaCompile Include="source\tensor\core\movement\CopyBlocksSelected.cu" />
+    <CudaCompile Include="source\tensor\core\movement\CopyIndexed.cu" />
+    <CudaCompile Include="source\tensor\core\movement\CopyValues.cu" />
+    <CudaCompile Include="source\tensor\core\movement\Gather.cu" />
+    <CudaCompile Include="source\tensor\core\movement\Spread.cu" />
+    <CudaCompile Include="source\tensor\core\reduce\ReduceMax.cu" />
+    <CudaCompile Include="source\tensor\core\reduce\ReduceSum.cu" />
+    <CudaCompile Include="source\tensor\core\shape\MakeMergeBlockIndex.cu" />
+    <CudaCompile Include="source\tensor\core\shape\MakeSplitBlockIndex.cu" />
+    <CudaCompile Include="source\tensor\core\shape\MergeBlockLists.cu" />
+    <CudaCompile Include="source\tensor\core\shape\Unsqueeze.cu" />
+    <CudaCompile Include="source\tensor\core\sort\Sort.cu" />
+    <CudaCompile Include="source\tensor\core\sort\TopK.cu" />
+    <CudaCompile Include="source\tensor\core\utilities\FlushToMem.cu" />
+    <CudaCompile Include="source\tensor\core\utilities\SetAscendingOrder.cu" />
+    <CudaCompile Include="source\tensor\function\Dropout.cu" />
+    <CudaCompile Include="source\tensor\function\DropoutWithIndex.cu" />
+    <CudaCompile Include="source\tensor\function\HardTanH.cu" />
+    <CudaCompile Include="source\tensor\function\LogSoftmax.cu" />
+    <CudaCompile Include="source\tensor\function\Loss.cu" />
+    <CudaCompile Include="source\tensor\function\Rectify.cu" />
+    <CudaCompile Include="source\tensor\function\Sigmoid.cu" />
+    <CudaCompile Include="source\tensor\function\Softmax.cu" />
+    <CudaCompile Include="source\tensor\loss\CrossEntropy.cu" />
+  </ItemGroup>
+</Project>
